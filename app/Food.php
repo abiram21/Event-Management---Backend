@@ -1,0 +1,17 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Food extends Model
+{
+    protected $fillable =['range','unit_price','fac_id','client_id'];
+
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
+    
+}
